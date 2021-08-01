@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		MapAbility
+	</title>
+	<!-- appears in the browser toolbar -->
+
+	<link rel="stylesheet" href="style.css">
+	<!-- connects this html code to the css code which formats the website -->
+
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<!-- this code allows for the favicon to appear in the browser toolbar -->
+</head>
+  <body id="background2" action="registerconfo.html">
+  	<header id="navheader">
+  	<img src="logo.png" id="img2" onClick="document.location='index.html'">
+  	<!-- the code above was learned from W3Schools - here's the exact page I used: https://www.w3schools.com/js/js_window_location.asp -->
+  		<nav id="navigation">
+  			<ul class="navigation">
+  				<li>
+  					<a href="index2.html">
+  					Home
+  					</a>
+  				</li>
+
+  				<li>
+  					<a href="search.html">
+  					Search
+  					</a>
+  				</li>
+
+  				<li>
+  					<a href="index.html">
+  					Report
+  					</a>
+  				</li>
+
+          <li id="boris">
+  					<a onClick="document.location='https://docs.google.com/spreadsheets/d/1IKiHVfytomDJCNCcrxqFI8eK14anBLJ5ACJnNmgHos8/edit#gid=0'">
+  					Record
+  					</a>
+  				</li>
+
+  				<li>
+  					<a href="contact.html">
+  					Contact
+  					</a>
+  				</li>
+  			</ul>
+  		</nav>
+
+  	<a href="index3.html" id="btn">AblifyNow</a>
+  	<!-- all of the code above in terms of the header and the navigation bar were learned from W3 Schools (https://www.w3schools.com/howto/howto_css_responsive_header.asp) and in the following Youtube Video (https://www.youtube.com/watch?v=zH9vCO_zyTQ) -->
+      </header>
+
+      <br>
+      <br>
+
+      <div class="top-bar">
+             <h1>
+                 My Forum
+             </h1>
+         </div>
+         <br>
+         <div class="main">
+             <ol>
+             </ol>
+         </div>
+         <script src="data.js"></script>
+         <script>
+             console.log(threads);
+             var container = document.querySelector('ol');
+             for (let thread of threads) {
+                 var html = `
+                 <li class="row">
+                     <a href="/thread.html?${thread.id}">
+                         <h4 class="title">
+                             Normalized Ableism
+                         </h4>
+                         <div class="bottom">
+                             <p class="timestamp">
+                                 ${new Date(thread.date).toLocaleString()}
+                             </p>
+                             <p class="comment-count">
+                                 ${thread.comments.length} comments
+                             </p>
+                         </div>
+                     </a>
+                 </li>
+                 `
+                 container.insertAdjacentHTML('beforeend', html);
+             }
+         </script>
+         <style>
+
+             a {
+                 text-decoration: none;
+                 color: black;
+             }
+             h1, h4, ol {
+                 margin: 0;
+             }
+
+             .top-bar {
+                 background-color: skyblue;
+                 border-radius: 10px;
+                 border: 5px solid black;
+                 font-family: Candara;
+                 text-align: center;
+                 padding: 5px;
+             }
+             .main {
+                 background-color: skyblue;
+                 border-radius: 10px;
+                 border: 5px solid black;
+                 font-family: Candara;
+                 padding: 10px;
+             }
+             .row {
+             }
+             .bottom {
+                 display: flex;
+                 color: grey;
+                 font-size: 12px;
+             }
+             .timestamp {
+                 padding-right: 10px;
+             }
+         </style>
+<br>
+<br>
+
+         <button type="button" id="submit">
+         Create Post
+        </button>
+    </body>
+    </html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		MapAbility
+	</title>
+	<!-- appears in the browser toolbar -->
+
+	<link rel="stylesheet" href="style.css">
+	<!-- connects this html code to the css code which formats the website -->
+
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<!-- this code allows for the favicon to appear in the browser toolbar -->
+</head>
+<body id="background2" action="registerconfo.html">
+	<header id="navheader">
+	<img src="logo.png" id="img2" onClick="document.location='index.html'">
+	<!-- the code above was learned from W3Schools - here's the exact page I used: https://www.w3schools.com/js/js_window_location.asp -->
+		<nav id="navigation">
+			<ul class="navigation">
+				<li>
+					<a href="index2.html">
+					Home
+					</a>
+				</li>
+
+				<li>
+					<a href="search.html">
+					Search
+					</a>
+				</li>
+
+				<li>
+					<a href="index.html">
+					Report
+					</a>
+				</li>
+
+				<li id="boris">
+					<a onClick="document.location='https://docs.google.com/spreadsheets/d/1IKiHVfytomDJCNCcrxqFI8eK14anBLJ5ACJnNmgHos8/edit#gid=0'">
+					Record
+					</a>
+				</li>
+
+				<li>
+					<a href="contact.html">
+					Contact
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+	<a href="index3.html" id="btn">AblifyNow</a>
+	<!-- all of the code above in terms of the header and the navigation bar were learned from W3 Schools (https://www.w3schools.com/howto/howto_css_responsive_header.asp) and in the following Youtube Video (https://www.youtube.com/watch?v=zH9vCO_zyTQ) -->
+    </header>
+
+<br>
+<br>
+  <div class="boxed">
+    Introducing MapAbility's innovative accessibility search feature! After choosing your desired locale type and inserting a specific zip code, allow MapAbility to process through a variety of datasets, crowd-sourced information, and district maps to provide an accurate list of accessible locations.
+</div>
+
+<br>
+<br>
+
+<form id="form">
+  		<p id="bit">Location: &nbsp;
+				<select type="type" id="bit" required>
+            <option value="restaurant">Select</option>
+            <option value="restaurant">Restaurant</option>
+						<option value="movieTheatre">Movie Theatre</option>
+						<option value="theatre">Theatre</option>
+						<option value="library">Library</option>
+						<option value="govBuilding">Goverment Building</option>
+						<option value="departStore">Department Store</option>
+						<option value="grocery">Grocery</option>
+						<option value="privateOffice">Private Office</option>
+					</select>&nbsp;</p>
+					<p id="bit">Zip Code: &nbsp;
+					<input class="zipCode" name="zipcode" required></p>
+					<p class="col-md-4"><button id="button" onclick="document.location='products.html'">Search</button></p>
+				</div>
+		  </div>
+		  </form>
+		</div>
+	</header>
